@@ -128,7 +128,7 @@ async function Express(client) {
   app.use(
     session({
       secret:
-        "Tutorial#asjdkasassa1!##@!#!#$#@!#(*#(@!#!@HSJJJJAAAAAAASKJDKLSJAJLDLKAL",
+        "Tutorial#asjdkasassa1!##@!#!#$#@!#(*#(@!#!@HS1JJJJAAAAAAASKJDKLSJAJLDLKAL",
       resave: false,
       saveUninitialized: false,
       name: "Tutorial2023Website",
@@ -144,7 +144,7 @@ async function Express(client) {
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
         callbackURL: "http://localhost:3000/callback",
-        scope: ["identify", "guilds"],
+        scope: ["identify", "guilds", "email"],
       },
       async (accessToken, refreshToken, profile, done) => {
         return done(null, profile);
